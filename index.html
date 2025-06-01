@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Validation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="formWrapper">
+            <form class="login formcold" autocomplete="off">
+                <h2 class="mb-0">Login</h2>
+                <div class="inputWrapper">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <div class="position-relative">
+                        <input type="email" class="form-control" id="uemail" aria-describedby="emailHelp"
+                            placeholder="Enter Email" name="email">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="inputWrapper">
+                    <label for="Password" class="form-label">Enter Password</label>
+                    <div class="position-relative">
+                        <input type="password" class="form-control" id="ufepass" placeholder="Enter Password"
+                            name="Password">
+                        <span class="error"></span>
+                        <div class="inputIconWrapper">
+                            <i class="bi bi-eye-slash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputWrapper">
+                    <label for="ucompany" class="form-label">Enter Company</label>
+                    <div class="position-relative">
+                        <input type="text" class="form-control" id="ucompany" placeholder="Enter Company"
+                            name="Company">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="inputWrapper">
+                    <label for="umobile" class="form-label">Enter Mobile</label>
+                    <div class="position-relative">
+                        <input type="tel" class="form-control" id="umobile" placeholder="Enter Mobile" name="mobile"
+                            maxlength="10">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="inputWrapper">
+                    <label for="message" class="form-label">Enter Message</label>
+                    <div class="position-relative">
+                        <textarea name="message" id="message" class="form-control"
+                            placeholder="Enter Your Message"></textarea>
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="inputWrapper">
+                    <button type="submit" class="btn btn-primary text-capitalize">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
