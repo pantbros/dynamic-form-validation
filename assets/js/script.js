@@ -17,10 +17,22 @@ function getErrors(input){
         showError(input, `spaces not allowed in ${input.name.charAt(0).toUpperCase() + input.name.slice(1)}`);
         isvalid = false;
     }
-    else if(input.type == 'tel' && input.value.length !== input.maxLength){   
-        showError(input, `Number should be atleast contains ${input.maxLength} numbers`);
-        isvalid = false;
+    else if (input.type === 'tel') {
+        const value = input.value.trim(); // Optional: if you're worried about leading/trailing spaces
+        const isOnlyDigits = /^[0-9]+$/.test(value);
+        const isCorrectLength = value.length === parseInt(input.maxLength);
+        if (!isOnlyDigits) {
+            showError(input, "Phone number should contain digits only");
+            isvalid = false;
+        } else if (!isCorrectLength) {
+            showError(input, `Number should contain exactly ${input.maxLength} digits`);
+            isvalid = false;
+        } else {
+            showError(input, ``);
+        }
+        console.log(isvalid);
     }
+
     else{
         showError(input, ``);
     }
