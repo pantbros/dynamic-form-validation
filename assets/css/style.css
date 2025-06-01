@@ -28,7 +28,7 @@ section{
 }
 
 .inputWrapper,
-form.login.formcold {
+form.form.formcold {
     display: flex;
     flex-direction: column;
     gap: .5rem;
